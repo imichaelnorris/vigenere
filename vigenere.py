@@ -14,6 +14,7 @@ IntVector = robjects.IntVector
 
 #note that there are some magic numbers in here, for instance my hardcoding 
 #of the number of letters in the key
+#fix this
 
 def kasiskiTest(frequent_trigrams, trigrams):
     testTrigram = trigrams[frequent_trigrams[0][1]] 
