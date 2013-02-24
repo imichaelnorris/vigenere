@@ -10,6 +10,8 @@ barplot = r.barplot
 hist = r.hist
 IntVector = robjects.IntVector
 
+#simple form of polyalphabetic substitution
+
 #note that there are some magic numbers in here, for instance my hardcoding 
 #of the number of letters in the key
 
