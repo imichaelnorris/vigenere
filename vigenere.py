@@ -19,6 +19,7 @@ IntVector = robjects.IntVector
 #fix this
 def main(s, m):
     '''attempt a bruteforce on vigenere cipher from file s with key length m'''
+    m = int(m)
     def kasiskiTest(frequent_trigrams, trigrams):
         testTrigram = trigrams[frequent_trigrams[0][1]] 
         return [testTrigram[i] - testTrigram[i-1] for i in range(1, len(testTrigram))]
@@ -111,7 +112,7 @@ def main(s, m):
     for i in text:
         textArr.append(letterConvert(i))
 
-    m = 6
+    #m = 6
     #keyFrequency is how many times the number appears
     keyFrequency = [{} for i in range(0, m)]
     n = len(textArr)
@@ -192,4 +193,7 @@ def main(s, m):
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:
-        s = 
+        if "h" in sys.argv[1:] or "-h" in sys.argv[1:] or "-help" in sys.argv[1:]:
+            print("pass in a file with the ciphertext (text must be in one line, no spaces) and the length of the key")
+        if len(sys.argv) == 3:
+            main(sys.argv[1], sys.argv[2])
